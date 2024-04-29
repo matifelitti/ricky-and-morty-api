@@ -93,9 +93,9 @@ function App() {
 
       <div class="footer">
         <div class="footer-content">
-          <p>CHARACTERS: 826</p>
-          <p>LOCATIONS: 126</p>
-          <p>EPISODES: 51</p>
+          <a href="http://rickandmortyapi.com/api/character">CHARACTERS: 826</a>
+          <a href="http://rickandmortyapi.com/api/location">LOCATIONS: 126</a>
+          <a href="http://rickandmortyapi.com/api/episode">EPISODES: 51</a>
         </div>
         <div class="footer-image">
           <img src="footer-image.jpg" alt="Footer Image"></img>

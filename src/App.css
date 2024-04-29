@@ -118,10 +118,11 @@ h4 {
   margin-bottom: 50px;
 }
 
-.footer-content p {
+.footer-content a {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
+  color: rgba(55, 219, 55, 0.815);
   margin: 20px;
 }
 
@@ -131,7 +132,7 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
-  .footer-content p {
+  .footer-content a {
     font-size: 12px;
   }
 }
@@ -173,7 +174,7 @@ h4 {
     font-size: 14px;
   }
 
-  .footer-content p {
+  .footer-content a {
     font-size: 7px;
     margin: 10px;
   }
@@ -215,7 +216,7 @@ h4 {
     font-size: 12px;
   }
 
-  .footer-content p {
+  .footer-content a {
     font-size: 7px;
     margin: 5px;
   }
