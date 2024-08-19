@@ -126,20 +126,14 @@ h4 {
   margin: 20px;
 }
 
-::selection{
+::selection {
   color: rgba(55, 219, 55, 0.815);
   background-color: black;
 }
 
-@media screen and (max-width: 1000px) {
-  .footer-content a {
-    font-size: 12px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .navbar {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .search-container input[type="text"] {
@@ -179,7 +173,6 @@ h4 {
     margin: 10px;
   }
 }
-
 
 @media screen and (max-width: 450px) {
   .navbar {

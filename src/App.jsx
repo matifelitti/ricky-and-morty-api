@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./Card";
 import Pagination from "./Pagination";
+import axios from "axios";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -11,32 +12,32 @@ function App() {
 
   const charactersUrl = "https://rickandmortyapi.com/api/character";
 
-  const fetchresults = (url) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          setSearchError(true);
-        } else {
-          setCharacters(data.results);
-          setInfo(data.info);
-          setSearchError(false);
-        }
+  const fetchResults = (url) => {
+    axios
+      .get(url)
+      .then((response) => {
+        const data = response.data;
+        setCharacters(data.results);
+        setInfo(data.info);
+        setSearchError(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error(error);
+        setSearchError(true);
+      });
   };
 
   useEffect(() => {
-    fetchresults(charactersUrl);
+    fetchResults(charactersUrl);
   }, []);
 
   // Pagination:
   const onPrevious = () => {
-    fetchresults(info.prev);
+    fetchResults(info.prev);
   };
 
   const onNext = () => {
-    fetchresults(info.next);
+    fetchResults(info.next);
   };
 
   // Search Character:
@@ -45,10 +46,10 @@ function App() {
     setSearchName(searchValue);
 
     if (searchValue === "") {
-      fetchresults(charactersUrl);
+      fetchResults(charactersUrl);
     } else {
       const searchUrl = `${charactersUrl}?name=${searchValue}`;
-      fetchresults(searchUrl);
+      fetchResults(searchUrl);
     }
   };
 
@@ -91,13 +92,13 @@ function App() {
         />
       </div>
 
-      <div class="footer">
-        <div class="footer-content">
+      <div className="footer">
+        <div className="footer-content">
           <a href="http://rickandmortyapi.com/api/character">CHARACTERS: 826</a>
           <a href="http://rickandmortyapi.com/api/location">LOCATIONS: 126</a>
           <a href="http://rickandmortyapi.com/api/episode">EPISODES: 51</a>
         </div>
-        <div class="footer-image">
+        <div className="footer-image">
           <img src="footer-image.jpg" alt="Footer Image"></img>
         </div>
       </div>
