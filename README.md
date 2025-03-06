@@ -1,9 +1,30 @@
-# Rick and Morty API Project
+# 🛸 Rick and Morty API Project  
 
-This project utilizes the [Rick and Morty API](https://rickandmortyapi.com/) to display information about characters from the popular animated television series "Rick and Morty". The project is built using React, allowing users to browse through various data provided by the API in an intuitive and interactive way.
+This **React-based web application** leverages the **Rick and Morty API** to display detailed information about characters from the popular animated series **"Rick and Morty."** Users can browse, search, and navigate through various characters in an intuitive and interactive interface.  
 
-## Features
+## 🚀 Features  
 
-- Display information about characters, including their names, images, status, species, origin and location.
-- Search characters bar.
-- Pagination.
+- **📜 Character Details** – Displays key information, including **name, image, status, species, origin,** and **current location**.  
+- **🔍 Search Bar** – Easily find characters by name.  
+- **📄 Pagination** – Navigate through multiple pages of character data seamlessly.  
+
+## 🛠️ Technologies Used  
+
+- **React** – For building a dynamic and interactive UI.  
+- **Axios / Fetch API** – For making API requests.  
+
+## 🎮 Getting Started  
+
+1. **Clone the Repository**  
+   ```sh
+   git clone https://github.com/matifelitti/rick-and-morty-api.git  
+   cd rick-and-morty-api  
+   ```  
+2. **Install Dependencies**  
+   ```sh
+   npm install  
+   ```  
+3. **Run the Application**  
+   ```sh
+   npm start  
+   ```  
